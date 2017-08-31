@@ -20,7 +20,7 @@ COPY common/container_scripts/runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
 COPY common/container_scripts/runLocal.sh /usr/local/bin/runLocal.sh
 COPY runS3Batch_prerun_custom.sh /usr/local/bin/runS3Batch_prerun_custom.sh
 COPY runS3Batch_postrun_custom.sh /usr/local/bin/runS3Batch_postrun_custom.sh
-
+COPY findIndex.py /usr/local/bin/findIndex.py
 
 RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh /usr/local/bin/runLocal.sh 
 
