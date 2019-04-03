@@ -71,12 +71,8 @@ if(isNonEmptyString($options{transcriptomeIndex}))
     #Figure out the name of the index by looking at one of the transcriptome Bowtie2 index files
     $size = @files;
     $index = 0;
-    print("T index is $options{transcriptomeIndex}");
-
     while(!defined($transcriptome_index_name) && $index < $size)
     {
-        print("INDEX $files[$index]");
-
         if($files[$index] !~ m/^\./ && $files[$index] =~ m/\.bt2$/)
         {
             $transcriptome_index_name = $files[$index];
@@ -243,7 +239,6 @@ if(isNonEmptyString($options{index}))
     $index =0;
     while(!defined($index_name) && $index < $size)
     {
-        #print("$files[$index]")
         if($files[$index] !~ m/^\./ && $files[$index] =~ m/\.bt2$/)
         {
             $index_name = $files[$index];
